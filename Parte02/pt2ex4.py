@@ -15,7 +15,13 @@ print ('result =', str(result))
 print('result type =', str(result.dtype))
 
 min_val, max_val, min_loc, max_loc = cv.minMaxLoc(result)
-print('max_val =', str(max_val))
+print('max_loc =', str(max_loc))
+
+# Desenha um retângulo à volta do Wally
+top_left = max_loc
+bottom_right = (top_left[0] + h, top_left[1] + w)
+cv.rectangle(img, top_left, bottom_right, (255, 0, 0), 3)
+
 
 cv.imshow('Original', img)
 cv.imshow('Template', template)
