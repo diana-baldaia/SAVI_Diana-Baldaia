@@ -11,7 +11,7 @@ import json # Use QtAgg backend for better interactivity
 # y = a(x-h) ^ 2 + k
 # a é a abertura
 # h é o x do vértice
-#k é o y do vértice
+# k é o y do vértice
 
 class ParabolaModel:
 
@@ -37,7 +37,6 @@ class ParabolaModel:
 
         xs = [-10, 0]
         ys = self.getYs(xs)
-
         if self.plot_handle is None:
             self.plot_handle = plt.plot(xs, ys,'-'+color, linewidth=2)
         else:
